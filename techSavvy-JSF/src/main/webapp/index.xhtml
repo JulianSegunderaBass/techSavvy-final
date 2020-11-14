@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>techSavvy</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        hr {
+            background-color: #fff;
+        }
+        body {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">techSavvy</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#pcSection" class="nav-link">Browse PCs</a>
+            </li>
+            <li class="nav-item">
+                <a href="#laptopSection" class="nav-link">Browse Laptops</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="signup.xhtml" class="nav-link">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a href="login.xhtml" class="nav-link">Log In</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- Main Header Jumbotron -->
+<div class="jumbotron jumbotron-fluid bg-dark text-white" id="pcSection">
+    <div class="container">
+        <h1 class="display-3">Welcome to techSavvy</h1>
+        <p class="lead">Choose from our assortment of PCs and Laptops, and customize to your liking.</p>
+        <hr class="my-4" />
+    </div>
+</div>
+
+<div class="container">
+    <!-- PC Section Jumbotron -->
+    <div class="jumbotron mt-3 bg-secondary text-white">
+        <h1 class="display-5">Browse our PC models</h1>
+        <hr class="my-4" />
+        <a class="btn btn-primary btn-lg" href="./pcOrderForm.xhtml" role="button">Customize a PC</a>
+    </div>
+    <!-- PC Selection -->
+    <div class="row mt-3">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+            <div class="card border border-secondary" style="width: 18rem;">
+                <img src="images/PC_1.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <p class="card-text"><b>Package 1(Php 38 000)</b></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Windows 10 Home</li>
+                    <li class="list-group-item">Intel® Core i5-10400F Processor</li>
+                    <li class="list-group-item">GeForce GTX 1660 SUPER 6GB</li>
+                    <li class="list-group-item">8 GB DDR4-2666MHz ADATA Memory</li>
+                    <li class="list-group-item">GIGABYTE B460M DS3H AC MB</li>
+                    <li class="list-group-item">450 GB ADATA SSD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+            <div class="card border border-secondary" style="width: 18rem;">
+                <img src="images/PC_2.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <p class="card-text"><b>Package 2(Php 38 000)</b></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Windows 10 Home</li>
+                    <li class="list-group-item">AMD Ryzen 7 3700X Processor</li>
+                    <li class="list-group-item">GeForce RTX 2060 SUPER 8GB</li>
+                    <li class="list-group-item">16 GB DDR4-3200MHz XPG RGB Memory</li>
+                    <li class="list-group-item">ASUS PRIME B550-PLUS MB</li>
+                    <li class="list-group-item">500 GB WD NVMe + 1TB WD HDD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+            <div class="card border border-secondary" style="width: 18rem;">
+                <img src="images/PC_3.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <p class="card-text"><b>Package 3(Php 72 000)</b></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Windows 10 Home</li>
+                    <li class="list-group-item">Intel® Core i7-10700KF Processor</li>
+                    <li class="list-group-item">GeForce RTX 2070 SUPER 8GB</li>
+                    <li class="list-group-item">16 GB DDR4-3200MHz XPG RGB Memory</li>
+                    <li class="list-group-item">ASUS PRIME Z490-P</li>
+                    <li class="list-group-item">1TB ADATA XPG M.2 NVMe SSD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Laptop Section Jumbotron -->
+    <div class="jumbotron mt-4 bg-secondary text-white" id="laptopSection">
+        <h1 class="display-5">Browse our Laptop models</h1>
+        <hr class="my-4" />
+        <a class="btn btn-primary btn-lg" href="./lapOrderForm.xhtml" role="button">Customize a Laptop</a>
+    </div>
+    <!-- Laptop Selection -->
+    <div class="row mt-3">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+            <div class="card border border-secondary" style="width: 18rem;">
+                <img src="images/Lap_1.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <p class="card-text"><b>Package 1(Php 38 000)</b></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Windows 10 Home</li>
+                    <li class="list-group-item">Intel® Core™ i7-10750H Processor</li>
+                    <li class="list-group-item">15.6" FHD 1920x1080, 144Hz IPS-Level</li>
+                    <li class="list-group-item">NVIDIA GeForce RTX 2070 - 8GB</li>
+                    <li class="list-group-item">16GB DDR4-3200 Memory</li>
+                    <li class="list-group-item">1TB M.2 NVMe SSD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+            <div class="card border border-secondary" style="width: 18rem;">
+                <img src="images/Lap_2.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <p class="card-text"><b>Package 2(Php 38 000)</b></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Windows 10 Home</li>
+                    <li class="list-group-item">Intel® Core™ i7-9750H Processor</li>
+                    <li class="list-group-item">15.6" FHD 1920x1080, 144Hz IPS-Level</li>
+                    <li class="list-group-item">NVIDIA GeForce RTX 2060 - 6GB</li>
+                    <li class="list-group-item">8GB DDR4-2666 Memory</li>
+                    <li class="list-group-item">512GB M.2 NVMe SSD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+            <div class="card border border-secondary" style="width: 18rem;">
+                <img src="images/Lap_3.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <p class="card-text"><b>Package 3(Php 72 000)</b></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Windows 10 Home</li>
+                    <li class="list-group-item">Intel® Core™ i7-10750H Processor</li>
+                    <li class="list-group-item">NVIDIA GeForce GTX 1660 Ti - 6GB</li>
+                    <li class="list-group-item">15.6" FHD 1920x1080, 144Hz IPS-Level</li>
+                    <li class="list-group-item">16GB DDR4-3200 Memory</li>
+                    <li class="list-group-item">512GB M.2 NVMe SSD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+            <div class="card border border-secondary" style="width: 18rem;">
+                <img src="images/Lap_4.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <p class="card-text"><b>Package 4(Php 72 000)</b></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Windows 10 Home</li>
+                    <li class="list-group-item">Intel® Core™ i9-10980HK Processor</li>
+                    <li class="list-group-item">NVIDIA GeForce RTX 2070 SUPER 8GB</li>
+                    <li class="list-group-item">17.3" FHD 1920x1080, 300Hz IPS-Level</li>
+                    <li class="list-group-item">16GB DDR4-3200 Memory</li>
+                    <li class="list-group-item">1TB M.2 NVMe SSD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

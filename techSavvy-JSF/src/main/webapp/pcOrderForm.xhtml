@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC Order Form</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <style>
+        .form-container {
+            position: relative;
+            top: 110px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+        #image-price-section {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body class="bg-dark">
+
+<div class="container">
+    <!-- form-container is the main input form container being styled -->
+    <form class="form-container">
+        <!-- There is only one row for the whole container -->
+        <div class="row">
+            <!-- This column is used for the product image and price -->
+            <div class="col-lg-3 col-md-12 col-sm-12" id="image-price-section">
+                <img src="images/PC_1.jpg" alt="..." class="img-thumbnail" id="model-image" />
+                <h3 id="current-price">Current Price: <b>$1000</b></h3>
+            </div>
+            <!-- This column is used for the rest of the inputs -->
+            <div class="col-lg-9 col-md-12 col-sm-12">
+                <!-- A separate row for the inputs -->
+                <div class="row">
+                    <!-- Model choice -->
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <label for="model">Model</label>
+                        <select name="model" id="model" class="form-control">
+                            <option value="PC Package 1">PC Package 1</option>
+                            <option value="PC Package 2">PC Package 2</option>
+                            <option value="PC Package 3">PC Package 3</option>
+                        </select>
+                    </div>
+                    <!-- OS choice -->
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <label for="OS">Operating System</label>
+                        <select name="OS" id="OS" class="form-control">
+                            <option value="Windows 10 Home 64">Windows 10 Home 64</option>
+                            <option value="Windows 10 Pro">Windows 10 Pro</option>
+                        </select>
+                    </div>
+                    <!-- Processor choice -->
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <label for="processor">Processor</label>
+                        <select name="processor" id="processor" class="form-control">
+                            <option value="Intel® Core i5-10400F Processor">Intel® Core i5-10400F Processor</option>
+                            <option value="Intel® Core™ i7-9750H Processor">Intel® Core™ i7-9750H Processor</option>
+                            <option value="Intel® Core i7-10700KF Processor">Intel® Core i7-10700KF Processor</option>
+                            <option value="Intel® Core™ i7-10750H Processor">Intel® Core™ i7-10750H Processor</option>
+                            <option value="Intel® Core™ i9-10980HK Processor">Intel® Core™ i9-10980HK Processor</option>
+                            <option value="AMD Ryzen 7 3700X Processor">AMD Ryzen 7 3700X Processor</option>
+                        </select>
+                    </div>
+                    <!-- Graphics choice -->
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <label for="graphics">Graphics</label>
+                        <select name="graphics" id="graphics" class="form-control">
+                            <option value="NVIDIA GeForce GTX 1660 Ti 6GB">NVIDIA GeForce GTX 1660 Ti 6GB</option>
+                            <option value="NVIDIA GeForce GTX 1660 SUPER 6GB">NVIDIA GeForce GTX 1660 SUPER 6GB</option>
+                            <option value="NVIDIA GeForce RTX 2060 6GB">NVIDIA GeForce RTX 2060 6GB</option>
+                            <option value="NVIDIA GeForce RTX 2060 SUPER 8GB">NVIDIA GeForce RTX 2060 SUPER 8GB</option>
+                            <option value="NVIDIA GeForce RTX 2070 8GB">NVIDIA GeForce RTX 2070 8GB</option>
+                            <option value="NVIDIA GeForce RTX 2070 SUPER 8GB">NVIDIA GeForce RTX 2070 SUPER 8GB</option>
+                        </select>
+                    </div>
+                    <!-- Memory choice -->
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <label for="memory">Memory</label>
+                        <select name="memory" id="memory" class="form-control">
+                            <option value="8GB DDR4-2666MHz ADATA Memory">8GB DDR4-2666MHz ADATA Memory</option>
+                            <option value="16GB DDR4-3200 Memory">16GB DDR4-3200 Memory</option>
+                            <option value="16GB DDR4-3200MHz XPG RGB Memory">16GB DDR4-3200MHz XPG RGB Memory</option>
+                        </select>
+                    </div>
+                    <!-- Storage choice -->
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <label for="storage">Storage</label>
+                        <select name="storage" id="storage" class="form-control">
+                            <option value="450 GB ADATA SSD">450 GB ADATA SSD</option>
+                            <option value="512GB M.2 NVMe SSD">512GB M.2 NVMe SSD</option>
+                            <option value="1TB M.2 NVMe SSD">1TB M.2 NVMe SSD</option>
+                            <option value="1TB ADATA XPG M.2 NVMe SSD">1TB ADATA XPG M.2 NVMe SSD</option>
+                            <option value="500 GB WD NVMe + 1TB WD HDD">500 GB WD NVMe + 1TB WD HDD</option>
+                        </select>
+                    </div>
+                    <!-- Display choice -->
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <label for="display">Display</label>
+                        <select name="display" id="display" class="form-control">
+                            <option value="15.6 FHD 1920x1080, 144Hz IPS-Level">15.6" FHD 1920x1080, 144Hz IPS-Level</option>
+                            <option value="17.3 FHD 1920x1080, 300Hz IPS-Level">17.3" FHD 1920x1080, 300Hz IPS-Level</option>
+                        </select>
+                    </div>
+                    <!-- Warranty Plan choice -->
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <label for="warranty">Warranty</label>
+                        <select name="warranty" id="warranty" class="form-control">
+                            <option value="2-Year Protection">2-Year Protection</option>
+                            <option value="2-Year w/ Accidental Damange">2-Year w/ Accidental Damange</option>
+                            <option value="2-Yr. w/ Accidental Damage + Theft Protection">2-Yr. w/ Accidental Damage + Theft Protection</option>
+                            <option value="3-Year Protection Plan">3-Year Protection Plan</option>
+                            <option value="3-Year w/ Accidental Damage">3-Year w/ Accidental Damage</option>
+                            <option value="3-Yr. w/ Accidental Damage + Theft Protection">3-Yr. w/ Accidental Damage + Theft Protection</option>
+                        </select>
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block">Confirm Order</button>
+                    <a class="btn btn-danger btn-block" href="./index.xhtml" role="button">Cancel and Return Home</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Form Script Functionality -->
+<script>
+
+</script>
+
+</body>
+
+
+</html>
