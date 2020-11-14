@@ -1,4 +1,4 @@
 package apc.entjava.techSavvy;
 
-public class requestOrderBean {
+public class requestOrder {
 }
