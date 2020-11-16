@@ -4,15 +4,71 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<body>
-    <h:outputText value="#{requestOrderFormBean.model}" />
-    <h:outputText value="#{requestOrderFormBean.OS}" />
-    <h:outputText value="#{requestOrderFormBean.processor}" />
-    <h:outputText value="#{requestOrderFormBean.graphics}" />
-    <h:outputText value="#{requestOrderFormBean.memory}" />
-    <h:outputText value="#{requestOrderFormBean.storage}" />
-    <h:outputText value="#{requestOrderFormBean.display}" />
-    <h:outputText value="#{requestOrderFormBean.warranty}" />
-    <h:outputText value="#{requestOrderFormBean.price}" />
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>techSavvy</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        #result-area {
+            position: relative;
+            top: 110px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+<!--    Container to center the result list-->
+    <div class="container">
+<!--        Result area is styled-->
+        <div class="jumbotron" id="result-area">
+<!--            Table holds the data-->
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <th scope="row">Chosen Model / Package</th>
+                        <td><h:outputText value="#{requestOrderFormBean.model}" /></td>
+                        <th scope="row">Price(P)</th>
+                        <td><h:outputText value="#{requestOrderFormBean.price}" /></td>
+                        <th scope="row">OS</th>
+                        <td><h:outputText value="#{requestOrderFormBean.OS}" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Warranty</th>
+                        <td colspan="5"><h:outputText value="#{requestOrderFormBean.warranty}" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Memory</th>
+                        <td colspan="2"><h:outputText value="#{requestOrderFormBean.memory}" /></td>
+                        <th scope="row">Storage</th>
+                        <td colspan="2"><h:outputText value="#{requestOrderFormBean.storage}" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Processor</th>
+                        <td colspan="2"><h:outputText value="#{requestOrderFormBean.processor}" /></td>
+                        <th scope="row">Graphics</th>
+                        <td colspan="2"><h:outputText value="#{requestOrderFormBean.graphics}" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Display</th>
+                        <td colspan="5"><h:outputText value="#{requestOrderFormBean.display}" /></td>
+                    </tr>
+                </tbody>
+            </table>
+<!--            Returning to Home Page-->
+            <a class="btn btn-danger btn-block" href="./index.xhtml" role="button">Back to Home</a>
+        </div>
+    </div>
 </body>
 </html>
