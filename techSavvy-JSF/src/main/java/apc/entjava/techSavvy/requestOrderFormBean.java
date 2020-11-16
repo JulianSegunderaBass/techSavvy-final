@@ -8,70 +8,74 @@ import javax.inject.Named;
 @Named
 public class requestOrderFormBean {
 
-    private String pcModel, pcOS, pcProcessor, pcGraphics, pcMemory, pcStorage, pcDisplay, pcWarranty;
+    private String Model, OS, Processor, Graphics, Memory, Storage, Display, Warranty;
+    private int price;
 
-    public String getPcModel() {
-        return pcModel;
+    public String getModel() {
+        return Model;
     }
 
-    public void setPcModel(String pcModel) {
-        this.pcModel = pcModel;
+    public void setModel(String Model) {
+        this.Model = Model;
     }
 
-    public String getPcOS() {
-        return pcOS;
+    public String getOS() {
+        return OS;
     }
 
-    public void setPcOS(String pcOS) {
-        this.pcOS = pcOS;
+    public void setOS(String OS) {
+        this.OS = OS;
     }
 
-    public String getPcProcessor() {
-        return pcProcessor;
+    public String getProcessor() {
+        return Processor;
     }
 
-    public void setPcProcessor(String pcProcessor) {
-        this.pcProcessor = pcProcessor;
+    public void setProcessor(String Processor) {
+        this.Processor = Processor;
     }
 
-    public String getPcGraphics() {
-        return pcGraphics;
+    public String getGraphics() {
+        return Graphics;
     }
 
-    public void setPcGraphics(String pcGraphics) {
-        this.pcGraphics = pcGraphics;
+    public void setGraphics(String Graphics) {
+        this.Graphics = Graphics;
     }
 
-    public String getPcMemory() {
-        return pcMemory;
+    public String getMemory() {
+        return Memory;
     }
 
-    public void setPcMemory(String pcMemory) {
-        this.pcMemory = pcMemory;
+    public void setMemory(String Memory) {
+        this.Memory = Memory;
     }
 
-    public String getPcStorage() {
-        return pcStorage;
+    public String getStorage() {
+        return Storage;
     }
 
-    public void setPcStorage(String pcStorage) {
-        this.pcStorage = pcStorage;
+    public void setStorage(String Storage) {
+        this.Storage = Storage;
     }
 
-    public String getPcDisplay() {
-        return pcDisplay;
+    public String getDisplay() {
+        return Display;
     }
 
-    public void setPcDisplay(String pcDisplay) {
-        this.pcDisplay = pcDisplay;
+    public void setDisplay(String Display) {
+        this.Display = Display;
     }
 
-    public String getPcWarranty() {
-        return pcWarranty;
+    public String getWarranty() {
+        return Warranty;
     }
 
-    public void setPcWarranty(String pcWarranty) {
-        this.pcWarranty = pcWarranty;
+    public void setWarranty(String Warranty) {
+        this.Warranty = Warranty;
     }
 
+    public int getPrice() { return price; }
+
+    public void setPrice(int price) { this.price = price; }
 }
