@@ -1,13 +1,13 @@
 package apc.entjava.techSavvy;
 
-import javax.annotation.ManagedBean;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
-@ManagedBean
+
 @RequestScoped
 @Named
 public class requestOrderFormBean {
+
     private String pcModel, pcOS, pcProcessor, pcGraphics, pcMemory, pcStorage, pcDisplay, pcWarranty;
 
     public String getPcModel() {
@@ -73,4 +73,5 @@ public class requestOrderFormBean {
     public void setPcWarranty(String pcWarranty) {
         this.pcWarranty = pcWarranty;
     }
+
 }

@@ -33,7 +33,7 @@
 
 <div class="container">
     <!-- form-container is the main input form container being styled -->
-    <form class="form-container">
+    <h:form class="form-container">
         <!-- There is only one row for the whole container -->
         <div class="row">
             <!-- This column is used for the product image and price -->
@@ -141,15 +141,14 @@
                                 <f:selectItem itemValue="3-Yr. w/ Accidental Damage + Theft Protection" itemLabel="3-Yr. w/ Accidental Damage + Theft Protection" />
                             </h:selectOneMenu>
                         </br>
-                        <h:commandButton action="resultOrder" value="Submit" />
                     </div>
                     <!-- Submit Button -->
-
+                    <h:commandButton value="Submit" action="resultOrder.xhtml" > </h:commandButton>
                     <a class="btn btn-danger btn-block" href="./index.xhtml" role="button">Cancel and Return Home</a>
                 </div>
             </div>
         </div>
-    </form>
+    </h:form>
 </div>
 
 <!-- Form Script Functionality -->
