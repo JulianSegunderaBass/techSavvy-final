@@ -75,7 +75,19 @@ public class requestOrderFormBean {
         this.Warranty = Warranty;
     }
 
-    public int getPrice() { return price; }
+    public int getPrice() {
+        if (Model.equals("Laptop Package 1") || Model.equals("PC Package 1")) {
+            this.price = 38000;
+        } else if (Model.equals("Laptop Package 2") || Model.equals("PC Package 2")) {
+            this.price = 50000;
+        } else if (Model.equals("Laptop Package 3")) {
+            this.price = 72000;
+        } else if (Model.equals("PC Package 3") || Model.equals("Laptop Package 4")) {
+            this.price = 25000;
+        }
+
+        return price;
+    }
 
     public void setPrice(int price) { this.price = price; }
 }
