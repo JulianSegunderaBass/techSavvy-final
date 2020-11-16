@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -8,7 +9,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laptop Order Form</title>
+    <title>PC Order Form</title>
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <style>
@@ -32,12 +33,12 @@
 
 <div class="container">
     <!-- form-container is the main input form container being styled -->
-    <form class="form-container">
+    <h:form class="form-container">
         <!-- There is only one row for the whole container -->
         <div class="row">
             <!-- This column is used for the product image and price -->
             <div class="col-lg-3 col-md-12 col-sm-12" id="image-price-section">
-                <img src="images/Lap_1.jpg" alt="..." class="img-thumbnail" id="model-image" />
+                <img src="images/PC_1.jpg" alt="..." class="img-thumbnail" id="model-image" />
                 <h3 id="current-price">Current Price: <b>$1000</b></h3>
             </div>
             <!-- This column is used for the rest of the inputs -->
@@ -47,91 +48,107 @@
                     <!-- Model choice -->
                     <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="model">Model</label>
-                        <select name="model" id="model" class="form-control">
-                            <option value="Laptop Package 1">Laptop Package 1</option>
-                            <option value="Laptop Package 2">Laptop Package 2</option>
-                            <option value="Laptop Package 3">Laptop Package 3</option>
-                        </select>
+                        <br>
+                            <h:selectOneMenu value="#{requestOrderFormBean.model}" id="model">
+                                <f:selectItem itemValue="Laptop Package 1" itemLabel="Laptop Package 1" />
+                                <f:selectItem itemValue="Laptop Package 2" itemLabel="Laptop Package 2" />
+                                <f:selectItem itemValue="Laptop Package 3" itemLabel="Laptop Package 3" />
+                            </h:selectOneMenu>
+                        </br>
                     </div>
                     <!-- OS choice -->
                     <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="OS">Operating System</label>
-                        <select name="OS" id="OS" class="form-control">
-                            <option value="Windows 10 Home 64">Windows 10 Home 64</option>
-                            <option value="Windows 10 Pro">Windows 10 Pro</option>
-                        </select>
+                        <br>
+                            <h:selectOneMenu value="#{requestOrderFormBean.OS}" id="OS">
+                                <f:selectItem itemValue="Windows 10 Home 64" itemLabel="Windows 10 Home 64" />
+                                <f:selectItem itemValue="Windows 10 Pro" itemLabel="Windows 10 Pro" />
+                            </h:selectOneMenu>
+                        </br>
                     </div>
                     <!-- Processor choice -->
                     <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="processor">Processor</label>
-                        <select name="processor" id="processor" class="form-control">
-                            <option value="Intel® Core i5-10400F Processor">Intel® Core i5-10400F Processor</option>
-                            <option value="Intel® Core™ i7-9750H Processor">Intel® Core™ i7-9750H Processor</option>
-                            <option value="Intel® Core i7-10700KF Processor">Intel® Core i7-10700KF Processor</option>
-                            <option value="Intel® Core™ i7-10750H Processor">Intel® Core™ i7-10750H Processor</option>
-                            <option value="Intel® Core™ i9-10980HK Processor">Intel® Core™ i9-10980HK Processor</option>
-                            <option value="AMD Ryzen 7 3700X Processor">AMD Ryzen 7 3700X Processor</option>
-                        </select>
+                        <br>
+                            <h:selectOneMenu value="#{requestOrderFormBean.processor}" id="processor">
+                                <f:selectItem itemValue="Intel® Core i5-10400F Processor" itemLabel="Intel® Core i5-10400F Processor" />
+                                <f:selectItem itemValue="Intel® Core™ i7-9750H Processor" itemLabel="Intel® Core™ i7-9750H Processor" />
+                                <f:selectItem itemValue="Intel® Core i7-10700KF Processor" itemLabel="Intel® Core i7-10700KF Processor" />
+                                <f:selectItem itemValue="Intel® Core™ i7-10750H Processor" itemLabel="Intel® Core™ i7-10750H Processor" />
+                                <f:selectItem itemValue="Intel® Core™ i9-10980HK Processor" itemLabel="Intel® Core™ i9-10980HK Processor" />
+                                <f:selectItem itemValue="AMD Ryzen 7 3700X Processor" itemLabel="AMD Ryzen 7 3700X Processor" />
+                            </h:selectOneMenu>
+                        </br>
                     </div>
                     <!-- Graphics choice -->
                     <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="graphics">Graphics</label>
-                        <select name="graphics" id="graphics" class="form-control">
-                            <option value="NVIDIA GeForce GTX 1660 Ti 6GB">NVIDIA GeForce GTX 1660 Ti 6GB</option>
-                            <option value="NVIDIA GeForce GTX 1660 SUPER 6GB">NVIDIA GeForce GTX 1660 SUPER 6GB</option>
-                            <option value="NVIDIA GeForce RTX 2060 6GB">NVIDIA GeForce RTX 2060 6GB</option>
-                            <option value="NVIDIA GeForce RTX 2060 SUPER 8GB">NVIDIA GeForce RTX 2060 SUPER 8GB</option>
-                            <option value="NVIDIA GeForce RTX 2070 8GB">NVIDIA GeForce RTX 2070 8GB</option>
-                            <option value="NVIDIA GeForce RTX 2070 SUPER 8GB">NVIDIA GeForce RTX 2070 SUPER 8GB</option>
-                        </select>
+                        <br>
+                            <h:selectOneMenu value="#{requestOrderFormBean.graphics}" id="graphics">
+                                <f:selectItem itemValue="NVIDIA GeForce GTX 1660 Ti 6GB" itemLabel="NVIDIA GeForce GTX 1660 Ti 6GB" />
+                                <f:selectItem itemValue="NVIDIA GeForce GTX 1660 SUPER 6GB" itemLabel="NVIDIA GeForce GTX 1660 SUPER 6GB" />
+                                <f:selectItem itemValue="NVIDIA GeForce RTX 2060 6GB" itemLabel="NVIDIA GeForce RTX 2060 6GB" />
+                                <f:selectItem itemValue="NVIDIA GeForce RTX 2060 SUPER 8GB" itemLabel="NVIDIA GeForce RTX 2060 SUPER 8GB" />
+                                <f:selectItem itemValue="NVIDIA GeForce RTX 2070 8GB" itemLabel="NVIDIA GeForce RTX 2070 8GB" />
+                                <f:selectItem itemValue="NVIDIA GeForce RTX 2070 SUPER 8GB" itemLabel="NVIDIA GeForce RTX 2070 SUPER 8GB" />
+                            </h:selectOneMenu>
+                        </br>
                     </div>
                     <!-- Memory choice -->
                     <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="memory">Memory</label>
-                        <select name="memory" id="memory" class="form-control">
-                            <option value="8GB DDR4-2666MHz ADATA Memory">8GB DDR4-2666MHz ADATA Memory</option>
-                            <option value="16GB DDR4-3200 Memory">16GB DDR4-3200 Memory</option>
-                            <option value="16GB DDR4-3200MHz XPG RGB Memory">16GB DDR4-3200MHz XPG RGB Memory</option>
-                        </select>
+                        <br>
+                            <h:selectOneMenu value="#{requestOrderFormBean.memory}" id="memory">
+                                <f:selectItem itemValue="8GB DDR4-2666MHz ADATA Memory" itemLabel="8GB DDR4-2666MHz ADATA Memory" />
+                                <f:selectItem itemValue="16GB DDR4-3200 Memory" itemLabel="16GB DDR4-3200 Memory" />
+                                <f:selectItem itemValue="16GB DDR4-3200MHz XPG RGB Memory" itemLabel="16GB DDR4-3200MHz XPG RGB Memory" />
+                            </h:selectOneMenu>
+                        </br>
                     </div>
                     <!-- Storage choice -->
                     <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="storage">Storage</label>
-                        <select name="storage" id="storage" class="form-control">
-                            <option value="450 GB ADATA SSD">450 GB ADATA SSD</option>
-                            <option value="512GB M.2 NVMe SSD">512GB M.2 NVMe SSD</option>
-                            <option value="1TB M.2 NVMe SSD">1TB M.2 NVMe SSD</option>
-                            <option value="1TB ADATA XPG M.2 NVMe SSD">1TB ADATA XPG M.2 NVMe SSD</option>
-                            <option value="500 GB WD NVMe + 1TB WD HDD">500 GB WD NVMe + 1TB WD HDD</option>
-                        </select>
+                        <br>
+                            <h:selectOneMenu value="#{requestOrderFormBean.storage}" id="storage">
+                                <f:selectItem itemValue="450 GB ADATA SSD" itemLabel="450 GB ADATA SSD" />
+                                <f:selectItem itemValue="512GB M.2 NVMe SSD" itemLabel="512GB M.2 NVMe SSD" />
+                                <f:selectItem itemValue="1TB M.2 NVMe SSD" itemLabel="1TB M.2 NVMe SSD" />
+                                <f:selectItem itemValue="1TB ADATA XPG M.2 NVMe SSD" itemLabel="1TB ADATA XPG M.2 NVMe SSD" />
+                                <f:selectItem itemValue="500 GB WD NVMe + 1TB WD HDD" itemLabel="500 GB WD NVMe + 1TB WD HDD" />
+                            </h:selectOneMenu>
+                        </br>
                     </div>
                     <!-- Display choice -->
                     <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="display">Display</label>
-                        <select name="display" id="display" class="form-control">
-                            <option value="15.6 FHD 1920x1080, 144Hz IPS-Level">15.6" FHD 1920x1080, 144Hz IPS-Level</option>
-                            <option value="17.3 FHD 1920x1080, 300Hz IPS-Level">17.3" FHD 1920x1080, 300Hz IPS-Level</option>
-                        </select>
+                        <br>
+                            <h:selectOneMenu value="#{requestOrderFormBean.display}" id="display">
+                                <f:selectItem itemValue="15.6 FHD 1920x1080, 144Hz IPS-Level" itemLabel="15.6 FHD 1920x1080, 144Hz IPS-Level" />
+                                <f:selectItem itemValue="17.3 FHD 1920x1080, 300Hz IPS-Level" itemLabel="17.3 FHD 1920x1080, 300Hz IPS-Level" />
+                            </h:selectOneMenu>
+                        </br>
                     </div>
                     <!-- Warranty Plan choice -->
                     <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="warranty">Warranty</label>
-                        <select name="warranty" id="warranty" class="form-control">
-                            <option value="2-Year Protection">2-Year Protection</option>
-                            <option value="2-Year w/ Accidental Damange">2-Year w/ Accidental Damange</option>
-                            <option value="2-Yr. w/ Accidental Damage + Theft Protection">2-Yr. w/ Accidental Damage + Theft Protection</option>
-                            <option value="3-Year Protection Plan">3-Year Protection Plan</option>
-                            <option value="3-Year w/ Accidental Damage">3-Year w/ Accidental Damage</option>
-                            <option value="3-Yr. w/ Accidental Damage + Theft Protection">3-Yr. w/ Accidental Damage + Theft Protection</option>
-                        </select>
+                        <br>
+                            <h:selectOneMenu value="#{requestOrderFormBean.warranty}" id="warranty">
+                                <f:selectItem itemValue="2-Year Protection" itemLabel="2-Year Protection" />
+                                <f:selectItem itemValue="2-Year w/ Accidental Damange" itemLabel="2-Year w/ Accidental Damange" />
+                                <f:selectItem itemValue="2-Yr. w/ Accidental Damage + Theft Protection" itemLabel="2-Yr. w/ Accidental Damage + Theft Protection" />
+                                <f:selectItem itemValue="3-Year Protection Plan" itemLabel="3-Year Protection Plan" />
+                                <f:selectItem itemValue="3-Year w/ Accidental Damage" itemLabel="3-Year w/ Accidental Damage" />
+                                <f:selectItem itemValue="3-Yr. w/ Accidental Damage + Theft Protection" itemLabel="3-Yr. w/ Accidental Damage + Theft Protection" />
+                            </h:selectOneMenu>
+                        </br>
                     </div>
                     <!-- Submit Button -->
-                    <button type="submit" class="btn btn-primary btn-block">Confirm Order</button>
+                    <h:commandButton value="Submit" action="resultOrder.xhtml" > </h:commandButton>
                     <a class="btn btn-danger btn-block" href="./index.xhtml" role="button">Cancel and Return Home</a>
                 </div>
             </div>
         </div>
-    </form>
+    </h:form>
 </div>
 
 <!-- Form Script Functionality -->
